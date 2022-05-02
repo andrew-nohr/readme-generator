@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// Included packages needed for this application
 
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generatemarkdown = require ('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Created an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -118,8 +118,25 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Created a function to write README file
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(fileName, data, err => {
+            // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+            if (err) {
+                reject(err);
+                // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+                return;
+            }
+            return new Promise((resolve, reject) => {
+                fs.writeFile(fileName, data, err => {
+                    // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+                    if (err) {
+                        reject(err);
+                        // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+                        return;
+                    }
+}
 
 // TODO: Create a function to initialize app
 function init() {}
