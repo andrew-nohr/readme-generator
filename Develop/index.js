@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
-const generatemarkdown = require ('./utils/generateMarkdown');
+const generateMarkdown = require ('./utils/generateMarkdown');
 
 // Created an array of questions for user input
 const questions = [
@@ -29,8 +29,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contribution',
-        message: 'What are the contribution guidelines for this project?'
+        name: 'contributors',
+        message: 'Who are the contributors for this project?'
     },
     {
         type: 'input',
