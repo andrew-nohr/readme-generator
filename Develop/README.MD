@@ -1,9 +1,9 @@
-# Read.ME Generator
+# ReadME Generator
 ![GitHub license](https://img.shields.io/badge/license-Apache 2.0-blue.svg)
 
 ## Description
   
-  A generator that produces a read.me for the user when the prompts are answered.
+  A generator that produces a readme when the prompts are answered.
   
 ## Table of Contents 
   
